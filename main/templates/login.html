@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">LOGIN</h3>
+    </div>
+    <div class="panel-body">
+
+<!--for display message -->
+	<div class = "form-group">
+    	{% if messages %}
+    	<ul class ="messages">
+    	{% for message in messages %}
+    	<li>
+    	<div class= "alert alert-danger">{{ message }}</div>
+    	</li>
+    	{% endfor %}
+        </ul>
+        {% endif %}
+     </div>   
+
+<!-- end of message section-->
+<div class = "col-md-10">
+<form method= "post" action = " " class = "form-horizontal">
+	{% csrf_token %}
+	<div class = "form-group">
+		<label class="col-md-2 control-label">Username</label>
+		<div class="col-md-5">
+			<input type = "text" name="user" class="form-control" placeholder="Enter Username">
+		</div>
+	</div><!-- end of form-group-->
+
+	<div class="form-group">
+		<label class="col-md-2 control-label">Password</label>
+		<div class="col-md-5">
+			<input type = "password" name="pas" class="form-control" placeholder="Enter Password">
+		</div>
+	</div><!-- end of form-group-->
+	
+	<div class = "col-md-offset-3">
+		<button type= "submit" class = "btn btn-success">Login</button>
+	</div>
+</form>
+</div>
+</div>
+</div>
+
+{% endblock %}	

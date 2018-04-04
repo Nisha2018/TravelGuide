@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="row">
+    {% for location in locations|dictsort:'name' %}
+    <div class="col-md-3">
+        <a href="/{{ location.id }}/">
+            <div class="tracker panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{ location.name }}</h2>
+                </div>
+
+                <div class="panel-body">
+                    <a href= "/{{ location.id }}/">
+                     <div class="tracker-photo">
+                        <img src="{{ location.image.url }}" >
+                     </div>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% if forloop.counter|divisibleby:4 %}
+        </div><div class= "row"><br><br>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}

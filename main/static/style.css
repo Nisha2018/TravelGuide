@@ -1,0 +1,60 @@
+/* This would be bootstrap-custom.css */
+
+/* ----- Bootstrap Theme ----- */
+
+body {
+ background: #7E797C url("images/image7.jpg");
+
+}
+
+header{
+  background: #6F99A9  url(images/place.jpg) top right no-repeat;
+}
+
+.navbar a{
+	font-weight: bold;
+}
+
+
+.panel-body img{
+  float: left;
+  width: 500px;
+  height: 300px;
+  padding-right: 10px;
+}
+
+
+.panel-body h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.tracker-photo img{
+  width: 200px;
+  height: 100px;
+} 
+
+
+.footer {
+  position: fixed;
+  background: #e6e2e2;
+  border-top: 1px solid #d6d4d4;
+  color: #bcbbbd;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container > .text-muted {
+  margin: 20px 0;
+}
+
+
