@@ -1,0 +1,1 @@
+web: gunicorn TravelTracker.wsgi
