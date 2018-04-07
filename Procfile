@@ -1,1 +1,1 @@
-web: gunicorn TravelTracker.wsgi
+web: sh -c "cd TravelTracker && gunicorn TravelTracker.wsgi"
